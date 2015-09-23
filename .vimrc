@@ -30,11 +30,12 @@ syntax on
 colorscheme spacegray
 
 " vim-gitgutter
-let g:gitgutter_sign_added = '+'
-let g:gitgutter_sign_modified = '>'
-let g:gitgutter_sign_removed = '×'
+let g:gitgutter_sign_added = '✚'
+let g:gitgutter_sign_modified = '➜'
+let g:gitgutter_sign_removed = '✘'
 
 " lightline.vim
+set laststatus=2
 let g:lightline = {
         \ 'colorscheme': 'wombat',
         \ 'mode_map': {'c': 'NORMAL'},
@@ -62,8 +63,8 @@ let g:lightline = {
         \   'charcode': 'MyCharCode',
         \   'gitgutter': 'MyGitGutter',
         \ },
-        \ 'separator': {'left': '⮀', 'right': '⮂'},
-        \ 'subseparator': {'left': '⮁', 'right': '⮃'}
+        \ 'separator': {'left': ' ', 'right': ' '},
+        \ 'subseparator': {'left': ' ', 'right': ' '}
         \ }
 
 function! MyModified()
@@ -150,8 +151,6 @@ function! MyCharCode()
     let nr = printf(nrformat, nr)
     return "'". char ."' ". nr
 endfunction
-
-set laststatus=2
 
 " line number
 set number
