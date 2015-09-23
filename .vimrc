@@ -22,7 +22,10 @@ let g:neobundle_default_git_protocol='https'
 
 " -->NeoBundle plugin begin
 NeoBundleFetch 'Shougo/neobundle.vim'
+" color scheme.
 NeoBundle 'ajh17/Spacegray.vim'
+NeoBundle 'w0ng/vim-hybrid'
+
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'airblade/vim-gitgutter'
@@ -36,7 +39,7 @@ filetype plugin indent on
 " syntax color
 set t_Co=256
 syntax on
-colorscheme spacegray
+colorscheme hybrid
 
 " vim-gitgutter
 let g:gitgutter_sign_added = '✚'
@@ -81,7 +84,7 @@ function! MyModified()
 endfunction
 
 function! MyReadonly()
-    return &ft !~? 'help\|vimfiler\|gundo' && &ro ? '⭤' : ''
+    return &ft !~? 'help\|vimfiler\|gundo' && &ro ? 'R' : ''
 endfunction
 
 function! MyFilename()
@@ -97,7 +100,7 @@ function! MyFugitive()
     try
 	if &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head')
 	    let _ = fugitive#head()
-	    return strlen(_) ? '⭠ '._ : ''
+	    return strlen(_) ? ' '._ : ''
 	endif
     catch
     endtry
