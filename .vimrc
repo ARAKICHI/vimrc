@@ -7,6 +7,9 @@ set autoindent
 set expandtab
 set shiftwidth=4
 
+" Incremental search
+set incsearch
+
 " NeoBundle
 if has('vim_starting')
   set nocompatible
@@ -29,6 +32,8 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle "ctrlpvim/ctrlp.vim"
 " <--NetBundle plugin end
 
 NeoBundleCheck
