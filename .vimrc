@@ -35,6 +35,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'Townk/vim-autoclose'
 " <--NetBundle plugin end
 
 NeoBundleCheck
@@ -55,7 +56,7 @@ let g:gitgutter_sign_removed = '✘'
 " lightline.vim
 set laststatus=2
 let g:lightline = {
-        \ 'colorscheme': 'wombat',
+        \ 'colorscheme': 'solarized_dark',
         \ 'mode_map': {'c': 'NORMAL'},
         \ 'active': {
         \   'left': [
