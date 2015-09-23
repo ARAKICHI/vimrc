@@ -1,3 +1,12 @@
+" Encoding
+set encoding=utf-8
+
+" Tab
+set tabstop=4
+set autoindent
+set expandtab
+set shiftwidth=4
+
 " NeoBundle
 if has('vim_starting')
   set nocompatible
@@ -11,13 +20,13 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 let g:neobundle_default_git_protocol='https'
 
-" NeoBundle plugin begin
+" -->NeoBundle plugin begin
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'ajh17/Spacegray.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'airblade/vim-gitgutter'
-" NetBundle plugin end
+" <--NetBundle plugin end
 
 NeoBundleCheck
 call neobundle#end()
