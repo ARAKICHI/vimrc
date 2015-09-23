@@ -33,7 +33,8 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle "ctrlpvim/ctrlp.vim"
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'bronson/vim-trailing-whitespace'
 " <--NetBundle plugin end
 
 NeoBundleCheck
