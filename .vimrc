@@ -36,12 +36,25 @@ NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'vim-scripts/gtags.vim'
+NeoBundle 'tyru/caw.vim.git'
 " <--NetBundle plugin end
 
 NeoBundleCheck
 call neobundle#end()
 
 filetype plugin indent on
+
+" caw
+nmap <C-_> <Plug>(caw:i:toggle)
+vmap <C-_> <Plug>(caw:i:toggle)
+
+" gtags
+map <C-g> :Gtags
+map <C-h> :Gtags -f %<CR>
+map <C-j> :GtagsCursor<CR>
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
 
 " syntax color
 set t_Co=256
